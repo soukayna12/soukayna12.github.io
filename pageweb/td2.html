@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        function afficheDate(){
+            var madate = new Date();
+            var js = madate.getDay();
+            var jm = madate.getDate();
+            var mois = madate.getMonth();
+            var annee = madate.getFullYear();
+
+            switch(js) {
+                case 0: js = "dimanche"; break;
+                case 1: js = "lundi"; break;
+                case 2: js = "mardi"; break;
+                case 3: js = "mercredi"; break;
+                case 4: js = "jeudi"; break;
+                case 5: js = "vendredi"; break;
+                case 6: js = "samedi"; break;
+            }
+
+            switch(mois) {
+                case 0: mois = "janvier"; break;
+                case 1: mois = "février"; break;
+                case 2: mois = "mars"; break;
+                case 3: mois = "avril"; break;
+                case 4: mois = "mai"; break;
+                case 5: mois = "juin"; break;
+                case 6: mois = "juillet"; break;
+                case 7: mois = "août"; break;
+                case 8: mois = "septembre"; break;
+                case 9: mois = "octobre"; break;
+                case 10: mois = "novembre"; break;
+                case 11: mois = "décembre"; break;
+            }
+
+            var b = js + " " + jm + " " + mois + " " + annee;
+            document.getElementById('aa').innerHTML = "aujourd'hui c'est: " + b; 
+        }
+
+        afficheDate(); // Corrected: Added parentheses to call the function
+    </script>
+    <p id="aa"></p>
+</body>
+</html>

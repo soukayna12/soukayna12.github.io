@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bloc{
+	height: 200px;
+}
+.cll3{
+	position: absolute;
+	left: 8px;
+	transition: left 6s,transform 7s;
+	white-space: nowrap;
+
+}
+#bloc:hover img{
+	left: 100%;
+	transform: translateX(-100%);
+    -webkit-transition:right 5s, -webkit-transform 5s;
+	-webkit-transform: translateX(100%);
+}
+    </style>
+</head>
+<body>
+    <div id="bloc"><img src="img.PNG"></div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- mode sombre  -->
+    <button class="mode" style="float: right" onmouseover="changeMode()">
+      mode sombre
+    </button>
+    <!-- formulaire -->
+    <div>
+      <!-- nom -->
+      <label for="nom">Nom </label>
+      <input type="text" placeholder="nom" />
+      <br />
+      <!-- prenom -->
+      <label for="prenom">Prenom </label>
+      <input type="text" placeholder="prenom" />
+      <br />
+      <!-- cin -->
+      <label for="cin">CIN </label>
+      <input type="text" placeholder="cin" />
+      <br />
+      <!-- age -->
+      <label for="age">Age </label>
+      <input type="number" max="200" min="0" id="age" placeholder="age" />
+
+      <br />
+      <!-- sexe -->
+      <label>choisir votre sexe</label>
+      <br />
+      <input type="radio" name="sexe" id="male" />
+      <label for="male">male</label>
+      <br />
+      <input type="radio" name="sexe" id="female" />
+      <label for="female">female</label>
+      <br />
+      <!-- button -->
+      <input
+        onclick="submit()"
+        type="submit"
+        id="submit"
+        value="se connecte a Netlfix"
+      />
+    </div>
+
+    <div style="display: none" id="holder">
+      <label for="select">choisir votre preferences cinematographiques</label>
+      <br />
+      <select name="select" id="select">
+        <option value="comedie">Comedie</option>
+        <option value="anime">Anime</option>
+        <option value="horreur">Horreur</option>
+      </select>
+    </div>
+    <br />
+
+    <!-- chanher le style button  && decor -->
+    <button id="change-style" onclick="changeStyle()">Changez Style</button>
+    <!-- decor -->
+    <div
+      id="decor"
+      style="
+        display: none;
+        padding: 15px;
+        border-style: solid dotted;
+        border-width: 1px;
+      "
+    >
+      <img
+        src="https://c4.wallpaperflare.com/wallpaper/386/573/293/dragon-quote-kali-linux-nethunter-wallpaper-preview.jpg"
+        style="display: block"
+      />
+      <br />
+      <p>
+        Bonjour cher <u style="color: red">client</u> , vous pouvez changer le
+        <u>style</u> de votre page sur cette fenetre !
+      </p>
+      <select>
+        <option value="sombre">sombre</option>
+        <option value="normal">normal</option>
+        <option value="windows">windows</option>
+      </select>
+    </div>
+
+    <script>
+      /* formulaire */
+      let button = document.getElementById("submit"),
+        select = document.getElementById("select"),
+        holder = document.getElementById("holder");
+      /* sumbit la forlmulaire*/
+      function submit() {
+        let age = document.getElementById("age").value;
+        if (age >= 16) holder.style.display = "block";
+        else alert("vous ne pouvez pas se connecte");
+      }
+
+      /* mode sombre */
+      function changeMode() {
+        document.documentElement.style.colorScheme = "dark";
+      }
+      /* changer le style*/
+      function changeStyle() {
+        document.getElementById("decor").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
